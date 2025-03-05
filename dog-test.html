@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="강아지 입양을 위한 준비도를 체크할 수 있는 체크리스트입니다. 체계적인 평가와 맞춤형 조언을 제공합니다.">
+    <meta property="og:title" content="강아지 입양 준비도 체크리스트">
+    <meta property="og:description" content="강아지 입양 전 준비사항을 체크하고 맞춤형 조언을 받아보세요.">
+    <meta property="og:type" content="website">
+    <meta name="author" content="이진우 (LEE JINWOO)">
+    <meta name="contact" content="milgae@naver.com">
+    <!-- PDF 생성을 위한 설정 -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https:">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>강아지 입양 준비도 체크리스트</title>
+    <link rel="stylesheet" href="dog-test.css">
+    <!-- PDF 생성을 위한 html2pdf 라이브러리 추가 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps/d8LrDNA4S7Km7K8e+Id3rQ5OOKrwp2Tf7gSzZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <div class="container" role="main">
+        <button id="scroll-top" class="scroll-top-button" aria-label="맨 위로 이동" title="맨 위로 이동">↑</button>
+        <header role="banner">
+            <h1>강아지 입양 준비도 체크리스트</h1>
+            <p>강아지를 키울 준비가 되었는지 확인해보세요!</p>
+        </header>
+
+        <div class="guide-container" role="complementary">
+            <h2>체크리스트 사용 안내</h2>
+            <div class="guide-content">
+                <div class="guide-section">
+                    <h3>📋 체크리스트 작성 전 알아두세요</h3>
+                    <ul>
+                        <li>강아지 입양은 10-15년 이상의 장기적인 책임이 필요해요.</li>
+                        <li>모든 가족 구성원의 동의가 필요한 중요한 결정이에요.</li>
+                        <li>정직한 자기 평가가 성공적인 입양의 첫걸음이에요.</li>
+                    </ul>
+                </div>
+                <div class="guide-section">
+                    <h3>✅ 체크리스트 사용 방법</h3>
+                    <ol>
+                        <li>각 항목을 꼼꼼히 읽고 현재 상황에 맞게 체크해주세요.</li>
+                        <li>궁금한 점이 있다면 물음표(?) 버튼을 클릭해서 자세한 설명을 확인하세요.</li>
+                        <li>'결과 확인하기' 버튼을 눌러 준비도를 확인하세요.</li>
+                        <li>결과를 PDF로 저장할 수 있어요.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="checklist-container">
+            <form id="checklist-form">
+                <div class="category" id="time-management">
+                    <h2>1. 시간 관리</h2>
+                    <div class="question">
+                        <input type="checkbox" id="time1" class="checkbox" aria-labelledby="time1-label">
+                        <label for="time1" id="time1-label">학교 수업 후 강아지와 놀아줄 시간이 매일 최소 1-2시간 있나요?</label>
+                        <button type="button" class="info-button" aria-label="추가 설명" aria-expanded="false">?</button>
+                        <div class="explanation hidden" role="tooltip">
+                            <p>강아지는 매일 충분한 관심과 놀이 시간이 필요해요. 특히 어린 강아지는 더 많은 관심이 필요합니다.</p>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <input type="checkbox" id="time2" class="checkbox" aria-labelledby="time2-label">
+                        <label for="time2" id="time2-label">주말에도 강아지와 산책하고 놀아줄 시간이 있나요?</label>
+                        <button type="button" class="info-button" aria-label="추가 설명" aria-expanded="false">?</button>
+                        <div class="explanation hidden" role="tooltip">
+                            <p>주말도 강아지에게는 평일과 같아요. 매일 규칙적인 산책과 놀이가 필요합니다.</p>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <input type="checkbox" id="time3" class="checkbox" aria-labelledby="time3-label">
+                        <label for="time3" id="time3-label">방학이 끝나도 꾸준히 강아지를 돌볼 수 있나요?</label>
+                        <button type="button" class="info-button" aria-label="추가 설명" aria-expanded="false">?</button>
+                        <div class="explanation hidden" role="tooltip">
+                            <p>방학 때만 시간이 많고 학기 중에는 바쁘다면, 강아지는 외로움을 느낄 수 있어요.</p>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <input type="checkbox" id="time4" class="checkbox" aria-labelledby="time4-label">
+                        <label for="time4" id="time4-label">학원이나 다른 활동으로 집을 비울 때 강아지는 어떻게 할 계획이 있나요?</label>
+                        <button type="button" class="info-button" aria-label="추가 설명" aria-expanded="false">?</button>
+                        <div class="explanation hidden" role="tooltip">
+                            <p>강아지를 혼자 오래 두면 스트레스를 받고 문제 행동이 생길 수 있어요.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category" id="responsibility">
+                    <h2>2. 책임감</h2>
+                    <div class="question">
+                        <input type="checkbox" id="resp1" class="checkbox" aria-labelledby="resp1-label">
+                        <label for="resp1" id="resp1-label">매일 아침저녁으로 강아지 밥을 챙겨줄 수 있나요?</label>
+                        <button type="button" class="info-button" aria-label="추가 설명" aria-expanded="false">?</button>
+                        <div class="explanation hidden" role="tooltip">
+                            <p>강아지는 규칙적인 식사 시간이 필요해요. 매일 아침저녁으로 밥을 챙겨줘야 합니다.</p>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <input type="checkbox" id="resp2" class="checkbox" aria-labelledby="resp2-label">
+                        <label for="resp2" id="resp2-label">하루에 2-3번 강아지를 산책시킬 수 있나요?</label>
+                        <button type="button" class="info-button" aria-label="추가 설명" aria-expanded="false">?</button>
+                        <div class="explanation hidden" role="tooltip">
+                            <p>강아지는 정기적인 운동이 필요해요. 최소 하루 2번은 산책을 시켜야 합니다.</p>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <input type="checkbox" id="resp3" class="checkbox" aria-labelledby="resp3-label">
+                        <label for="resp3" id="resp3-label">강아지 배변 훈련과 청소를 도울 수 있나요?</label>
+                        <button type="button" class="info-button" aria-label="추가 설명" aria-expanded="false">?</button>
+                        <div class="explanation hidden" role="tooltip">
+                            <p>강아지가 실수했을 때 바로 청소하고, 배변 훈련을 꾸준히 해야 해요.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category" id="financial">
+                    <h2>3. 재정적 책임</h2>
+                    <div class="question">
+                        <input type="checkbox" id="fin1" class="checkbox" aria-labelledby="fin1-label">
+                        <label for="fin1" id="fin1-label">강아지 사료, 간식, 장난감 비용을 어떻게 마련할 계획이 있나요?</label>
+                        <button type="button" class="info-button" aria-label="추가 설명" aria-expanded="false">?</button>
+                        <div class="explanation hidden" role="tooltip">
+                            <p>매월 사료, 간식, 장난감 등에 5-10만원 정도의 비용이 들 수 있어요.</p>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <input type="checkbox" id="fin2" class="checkbox" aria-labelledby="fin2-label">
+                        <label for="fin2" id="fin2-label">정기적인 예방접종과 건강검진 비용(연간 30-50만원)을 준비할 수 있나요?</label>
+                        <button type="button" class="info-button" aria-label="추가 설명" aria-expanded="false">?</button>
+                        <div class="explanation hidden" role="tooltip">
+                            <p>강아지의 건강을 위해 정기적인 예방접종과 건강검진이 필요해요.</p>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <input type="checkbox" id="fin3" class="checkbox" aria-labelledby="fin3-label">
+                        <label for="fin3" id="fin3-label">응급 상황이 생겼을 때의 의료비(수십만원~수백만원)는 어떻게 준비할 수 있나요?</label>
+                        <button type="button" class="info-button" aria-label="추가 설명" aria-expanded="false">?</button>
+                        <div class="explanation hidden" role="tooltip">
+                            <p>강아지가 아프거나 다쳤을 때 큰 의료비가 필요할 수 있어요.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category" id="environment">
+                    <h2>4. 생활 환경</h2>
+                    <div class="question">
+                        <input type="checkbox" id="env1" class="checkbox" aria-labelledby="env1-label">
+                        <label for="env1" id="env1-label">우리 집에 강아지가 충분히 뛰어놀 공간이 있나요?</label>
+                        <button type="button" class="info-button" aria-label="추가 설명" aria-expanded="false">?</button>
+                        <div class="explanation hidden" role="tooltip">
+                            <p>강아지는 활동적이에요. 특히 중형견 이상은 충분한 공간이 필요합니다.</p>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <input type="checkbox" id="env2" class="checkbox" aria-labelledby="env2-label">
+                        <label for="env2" id="env2-label">이웃들에게 소음 문제가 생기지 않을까요?</label>
+                        <button type="button" class="info-button" aria-label="추가 설명" aria-expanded="false">?</button>
+                        <div class="explanation hidden" role="tooltip">
+                            <p>강아지가 짖으면 이웃에게 피해를 줄 수 있어요. 특히 아파트는 더 주의해야 합니다.</p>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <input type="checkbox" id="env3" class="checkbox" aria-labelledby="env3-label">
+                        <label for="env3" id="env3-label">가족 중 알레르기가 있는 사람은 없나요?</label>
+                        <button type="button" class="info-button" aria-label="추가 설명" aria-expanded="false">?</button>
+                        <div class="explanation hidden" role="tooltip">
+                            <p>강아지 털이나 비듬에 알레르기가 있는 가족이 있다면 건강 문제가 생길 수 있어요.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category" id="long-term">
+                    <h2>5. 장기적 계획</h2>
+                    <div class="question">
+                        <input type="checkbox" id="long1" class="checkbox" aria-labelledby="long1-label">
+                        <label for="long1" id="long1-label">강아지는 10-15년 이상 살아요. 대학에 가거나 독립해도 계속 돌볼 수 있나요?</label>
+                        <button type="button" class="info-button" aria-label="추가 설명" aria-expanded="false">?</button>
+                        <div class="explanation hidden" role="tooltip">
+                            <p>강아지는 가족이에요. 10-15년 동안 책임지고 돌봐야 합니다.</p>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <input type="checkbox" id="long2" class="checkbox" aria-labelledby="long2-label">
+                        <label for="long2" id="long2-label">가족 여행을 갈 때 강아지는 어떻게 할 계획인가요?</label>
+                        <button type="button" class="info-button" aria-label="추가 설명" aria-expanded="false">?</button>
+                        <div class="explanation hidden" role="tooltip">
+                            <p>여행 갈 때 강아지를 맡길 곳이나 함께 갈 수 있는 장소를 고려해야 해요.</p>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <input type="checkbox" id="long3" class="checkbox" aria-labelledby="long3-label">
+                        <label for="long3" id="long3-label">이사를 가게 된다면 강아지도 함께 갈 수 있는 곳으로 갈 수 있나요?</label>
+                        <button type="button" class="info-button" aria-label="추가 설명" aria-expanded="false">?</button>
+                        <div class="explanation hidden" role="tooltip">
+                            <p>이사 갈 때 반려동물 출입이 금지된 곳이라면 강아지와 헤어져야 할 수도 있어요.</p>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="result-container">
+            <div class="action-buttons">
+                <button id="calculate-btn" class="primary-button">결과 확인하기</button>
+                <button id="save-btn" class="secondary-button" disabled>임시 저장하기</button>
+            </div>
+            
+            <div id="result" class="hidden">
+                <h2>나의 강아지 입양 준비도</h2>
+                <div class="score-container">
+                    <div class="score-circle" role="meter" aria-valuemin="0" aria-valuemax="100">
+                        <span id="final-score">0%</span>
+                    </div>
+                </div>
+                <div id="recommendation" class="recommendation-container">
+                    <h3>맞춤형 조언</h3>
+                    <div id="detailed-advice"></div>
+                </div>
+                <div class="action-buttons">
+                    <button id="download-pdf" class="primary-button">PDF로 저장하기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer role="contentinfo">
+        <p>© 2025 강아지 입양 준비도 체크리스트 | 제작: 이진우 (LEE JINWOO) | 문의: milgae@naver.com</p>
+        <p>책임감 있는 반려동물 입양을 응원합니다</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="dog-test.js" defer></script>
+</body>
+</html>
