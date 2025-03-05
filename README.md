@@ -1,4 +1,31 @@
-# 강아지 입양 준비도 체크리스트
+# Dog Adoption Website
+
+A simple and interactive website for dog adoption. Visit the live site at: https://curiofish.github.io/dog
+
+## Features
+- Interactive dog adoption interface
+- Responsive design
+- Easy navigation
+
+## Files
+- `dog-test.html`: Main HTML file
+- `dog-test.css`: Stylesheet
+- `dog-test.js`: JavaScript functionality
+- `index.html`: Redirect to main page
+- `dog-test-guide.txt`: User guide
+
+## How to Use
+1. Visit https://curiofish.github.io/dog
+2. Browse through the available dogs
+3. Click on a dog to see more details
+4. Follow the adoption process
+
+## Technologies Used
+- HTML5
+- CSS3
+- JavaScript
+
+## 강아지 입양 준비도 체크리스트
 
 강아지 입양을 고려하는 분들을 위한 온라인 체크리스트입니다.
 
