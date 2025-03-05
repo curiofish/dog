@@ -1,0 +1,21 @@
+{
+  "name": "강아지 입양 체크리스트",
+  "short_name": "강아지 체크리스트",
+  "description": "강아지 입양을 위한 준비도를 체크할 수 있는 체크리스트입니다.",
+  "start_url": "/dog/dog-test.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2196F3",
+  "icons": [
+    {
+      "src": "icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+} 
