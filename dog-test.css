@@ -1,21 +1,11 @@
 /**
- * 강아지 입양 준비도 체크리스트 스타일시트
+ * 강아지 입양 준비 정도 체크리스트 스타일시트
  * @author 이진우 (LEE JINWOO)
  * @contact milgae@naver.com
  * @copyright 2025 All rights reserved.
  */
 
-/* 기본 스타일 및 리셋 */
-:root {
-    --primary-color: #4A90E2; /* 밝은 블루 */
-    --secondary-color: #7FB3F5; /* 연한 블루 */
-    --accent-color: #F5F9FF; /* 아주 연한 블루 */
-    --background-color: #ffffff; /* 흰색 배경 */
-    --text-color: #2C5282; /* 진한 블루 텍스트 */
-    --border-radius: 8px;
-    --transition-speed: 0.3s;
-}
-
+/* 기본 스타일 */
 * {
     margin: 0;
     padding: 0;
@@ -25,643 +15,172 @@
 body {
     font-family: 'Noto Sans KR', sans-serif;
     line-height: 1.6;
-    color: var(--text-color);
-    background: #fff;
-    background-image: url('https://img.freepik.com/free-photo/front-view-cute-dog-with-copy-space_23-2148786562.jpg');
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    color: #333;
+    background-color: #f5f5f5;
 }
 
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #fff;
-    z-index: -1;
-}
-
-/* 컨테이너 및 레이아웃 */
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
-    background-color: #fff;
-    border-radius: var(--border-radius);
-    border: 1px solid #ddd;
-}
-
+/* 헤더 스타일 */
 header {
+    background-color: #4A90E2;
+    color: white;
     text-align: center;
+    padding: 2rem 0;
     margin-bottom: 2rem;
 }
 
 h1 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-    font-size: 2.5rem;
+    font-size: 2rem;
+    font-weight: 700;
 }
 
-/* 안내 섹션 스타일 */
-.guide-container {
-    margin: 2rem 0;
-    background: #fff;
-    border-radius: var(--border-radius);
-    padding: 2rem;
-    border: 1px solid #ddd;
-}
-
-.guide-container h2 {
-    color: var(--primary-color);
-    margin-bottom: 1.5rem;
-    text-align: center;
-    font-size: 1.8rem;
-}
-
-.guide-content {
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-
-.guide-section {
-    padding: 1.5rem;
-    background: #f8f9fa;
-    border-radius: var(--border-radius);
-    border-left: 4px solid var(--primary-color);
-}
-
-.guide-section h3 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.guide-section ul, 
-.guide-section ol {
-    padding-left: 1.5rem;
-    margin-bottom: 0;
-}
-
-.guide-section li {
-    margin-bottom: 0.8rem;
-    line-height: 1.5;
-    color: var(--text-color);
-}
-
-.guide-section ol li {
-    padding-left: 0.5rem;
-}
-
-/* 다크 모드에서의 안내 섹션 스타일 */
-@media (prefers-color-scheme: dark) {
-    .guide-container {
-        background: #1e1e1e;
-    }
-
-    .guide-section {
-        background: #2d2d2d;
-    }
-
-    .guide-section li {
-        color: #e0e0e0;
-    }
-}
-
-/* 모바일 반응형 스타일 */
-@media (max-width: 768px) {
-    .guide-content {
-        grid-template-columns: 1fr;
-    }
-
-    .guide-container {
-        padding: 1.5rem;
-    }
-
-    .guide-section {
-        padding: 1rem;
-    }
-}
-
-/* 체크리스트 스타일 */
+/* 메인 컨테이너 스타일 */
 .checklist-container {
-    background: #fff;
-    border-radius: var(--border-radius);
-    padding: 2rem;
-    border: 1px solid #ddd;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
-.category {
+/* 질문 섹션 스타일 */
+.question-section {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
     margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.category h2 {
-    color: var(--primary-color);
+.question-section h2 {
+    color: #4A90E2;
     margin-bottom: 1rem;
-    border-bottom: 2px solid var(--primary-color);
-    padding-bottom: 0.5rem;
+    font-size: 1.5rem;
 }
 
+/* 질문 스타일 */
 .question {
     margin-bottom: 1rem;
     padding: 1rem;
-    border-radius: var(--border-radius);
-    background: #fff;
+    border-radius: 4px;
     position: relative;
-    border: 1px solid var(--primary-color);
+    border: 1px solid #e0e0e0;
+}
+
+.question-content {
+    display: flex;
+    align-items: flex-start;
 }
 
 /* 체크박스 스타일 */
 .checkbox {
-    margin-right: 1rem;
+    margin-top: 0.25rem;
     width: 20px;
     height: 20px;
     cursor: pointer;
+    flex-shrink: 0;
 }
 
-.checkbox:focus + label {
-    outline: 2px solid var(--primary-color);
-    outline-offset: 2px;
+/* 레이블 스타일 */
+label {
+    margin-left: 0.5rem;
+    flex: 1;
 }
 
-/* 설명 버튼 및 텍스트 */
+/* 정보 버튼 스타일 */
 .info-button {
-    background: var(--secondary-color);
+    background-color: #4A90E2;
     color: white;
     border: none;
     border-radius: 50%;
     width: 24px;
     height: 24px;
+    font-size: 14px;
     cursor: pointer;
-    margin-left: 0.5rem;
-    transition: background-color var(--transition-speed);
+    margin-left: auto;
+    flex-shrink: 0;
 }
 
 .info-button:hover {
-    background-color: var(--primary-color);
+    background-color: #357ABD;
 }
 
+/* 설명 텍스트 스타일 */
 .explanation {
-    margin-top: 1rem;
-    padding: 1rem;
-    background: #fff;
-    border-radius: var(--border-radius);
-    font-size: 0.9rem;
-    border: 1px solid #ddd;
-}
-
-/* 결과 컨테이너 */
-.result-container {
-    margin-top: 2rem;
-    text-align: center;
-    background: #fff;
-    padding: 2rem;
-    border-radius: var(--border-radius);
-    border: 1px solid #ddd;
-}
-
-.action-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    margin: 1rem 0;
-}
-
-.primary-button, .secondary-button {
-    padding: 0.8rem 1.5rem;
-    border: none;
-    border-radius: var(--border-radius);
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color var(--transition-speed);
-}
-
-.primary-button {
-    background-color: var(--primary-color);
-    color: white;
-}
-
-.primary-button:hover {
-    background-color: var(--secondary-color);
-}
-
-.secondary-button {
-    background-color: var(--accent-color);
-    color: var(--text-color);
-}
-
-.secondary-button:hover {
-    background-color: var(--primary-color);
-    color: white;
-}
-
-.secondary-button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-}
-
-/* 점수 표시 */
-.score-circle {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background: conic-gradient(var(--primary-color) var(--progress), #f0f0f0 var(--progress));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 2rem auto;
-    position: relative;
-    border: 1px solid #ddd;
-}
-
-.score-circle::before {
-    content: '';
-    width: 130px;
-    height: 130px;
-    background: white;
-    border-radius: 50%;
-    position: absolute;
-}
-
-#final-score {
-    position: relative;
-    z-index: 1;
-    font-size: 2rem;
-    font-weight: bold;
-    color: var(--primary-color);
-}
-
-/* 추천 사항 */
-.recommendation-container {
-    background: #fff;
-    border-radius: var(--border-radius);
-    padding: 2rem;
-    margin-top: 2rem;
-    border: 1px solid #ddd;
-}
-
-.recommendation-container h3 {
-    color: var(--primary-color);
-    margin-bottom: 1.5rem;
-    font-size: 1.5rem;
-    text-align: center;
-}
-
-#detailed-advice {
-    margin-top: 1rem;
-    text-align: left;
-}
-
-.advice-container {
-    display: grid;
-    gap: 1.5rem;
-}
-
-.advice-item {
-    background: #fff;
-    border-radius: var(--border-radius);
-    padding: 1.5rem;
-    border: 1px solid var(--primary-color);
-    transition: transform var(--transition-speed);
-}
-
-.advice-item:hover {
-    transform: translateX(5px);
-}
-
-.advice-item h4 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
-}
-
-.advice-item ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.advice-item li {
-    position: relative;
-    padding-left: 1.5rem;
-    margin-bottom: 0.8rem;
-    line-height: 1.5;
-}
-
-.advice-item li::before {
-    content: "•";
-    color: var(--secondary-color);
-    font-size: 1.2rem;
-    position: absolute;
-    left: 0;
-    top: -2px;
-}
-
-/* 토스트 메시지 스타일 */
-.toast {
-    position: fixed;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--primary-color);
-    color: white;
-    padding: 1rem 2rem;
-    border-radius: var(--border-radius);
-    border: 1px solid #ddd;
-    z-index: 1000;
-}
-
-.toast-success {
-    background-color: var(--primary-color);
-}
-
-.toast-error {
-    background-color: #f44336;
-}
-
-.toast-info {
-    background-color: var(--accent-color);
-    color: var(--text-color);
-}
-
-/* 푸터 스타일 */
-footer {
-    margin-top: 3rem;
-    padding: 2rem;
-    background: white;
-    border-top: 1px solid rgba(0,0,0,0.1);
-    text-align: center;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    background-color: #f8f9fa;
+    border-radius: 4px;
     font-size: 0.9rem;
     color: #666;
+    width: 100%;
 }
 
-footer p:first-child {
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-}
-
-footer p:last-child {
-    color: var(--primary-color);
-    font-weight: 500;
-    margin-top: 0.5rem;
-}
-
-/* 다크 모드에서의 푸터 스타일 */
-@media (prefers-color-scheme: dark) {
-    footer {
-        background: #1e1e1e;
-        border-top-color: rgba(255,255,255,0.1);
-        color: #aaa;
-    }
-
-    footer p:last-child {
-        color: #81c784;
-    }
-}
-
-@keyframes slideUp {
-    from {
-        transform: translate(-50%, 100%);
-        opacity: 0;
-    }
-    to {
-        transform: translate(-50%, 0);
-        opacity: 1;
-    }
-}
-
-/* 다크 모드 지원 */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --text-color: #ffffff;
-        --background-color: #1e1e1e;
-        --accent-color: #4A90E2;
-    }
-
-    body {
-        background-color: #1e1e1e;
-    }
-
-    .container,
-    .guide-container,
-    .checklist-container,
-    .result-container,
-    .recommendation-container {
-        background-color: #2C5282;
-        border-color: #4A90E2;
-    }
-
-    .question,
-    .explanation,
-    .advice-item {
-        background: #1e1e1e;
-        border-color: #4A90E2;
-    }
-}
-
-/* 유틸리티 클래스 */
 .hidden {
     display: none;
 }
 
+/* 결과 섹션 스타일 */
+.result-section {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.result-section h2 {
+    color: #4A90E2;
+    margin-bottom: 1rem;
+}
+
+/* 버튼 스타일 */
+.action-buttons {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+button {
+    background-color: #4A90E2;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 0.5rem;
+}
+
+button:hover {
+    background-color: #357ABD;
+}
+
+/* 푸터 스타일 */
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
 /* 반응형 디자인 */
-@media (max-width: 768px) {
-    .container {
-        padding: 1rem;
+@media (max-width: 600px) {
+    header {
+        padding: 1.5rem 0;
     }
 
     h1 {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
-    .action-buttons {
-        flex-direction: column;
+    .question-section {
+        padding: 1rem;
     }
 
     .question {
         padding: 0.8rem;
     }
-}
 
-/* 접근성 개선 */
-@media (prefers-reduced-motion: reduce) {
-    * {
-        transition: none !important;
-    }
-}
-
-/* 고대비 모드 지원 */
-@media (prefers-contrast: high) {
-    :root {
-        --primary-color: #006400;
-        --secondary-color: #00008B;
-    }
-}
-
-.scroll-top-button {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 40px;
-    height: 40px;
-    background-color: var(--primary-color);
-    color: white;
-    border: 1px solid #ddd;
-    border-radius: 50%;
-    font-size: 20px;
-    cursor: pointer;
-    opacity: 0;
-    visibility: hidden;
-    z-index: 1000;
-}
-
-.scroll-top-button:hover {
-    background-color: var(--secondary-color);
-    transform: translateY(-3px);
-}
-
-.scroll-top-button.show {
-    opacity: 1;
-    visibility: visible;
-}
-
-@media (max-width: 768px) {
-    .scroll-top-button {
-        bottom: 20px;
-        right: 20px;
-        width: 35px;
-        height: 35px;
-        font-size: 18px;
-    }
-}
-
-/* PDF 및 프린트 최적화 */
-@media print {
-    /* 모든 스타일 초기화 */
-    * {
-        background: none !important;
-        color: #000000 !important;
-        border-color: #000000 !important;
-        box-shadow: none !important;
-        text-shadow: none !important;
-        -webkit-print-color-adjust: exact !important;
-        print-color-adjust: exact !important;
-        color-adjust: exact !important;
-    }
-
-    /* 배경 완전 제거 */
-    body, 
-    body::before,
-    .container,
-    .guide-container,
-    .checklist-container,
-    .result-container,
-    .recommendation-container,
-    .question,
-    .explanation,
-    .advice-item,
-    .score-circle,
-    .score-circle::before {
-        background: none !important;
-        background-image: none !important;
-        background-color: transparent !important;
-    }
-
-    /* 점수 원형 그래프 재정의 */
-    .score-circle {
-        width: 150px !important;
-        height: 150px !important;
-        border: 3px solid #000000 !important;
-        border-radius: 50% !important;
-        margin: 20px auto !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        position: relative !important;
-        background: none !important;
-        -webkit-print-color-adjust: exact !important;
-        print-color-adjust: exact !important;
-        color-adjust: exact !important;
-    }
-
-    .score-circle::before {
-        display: none !important;
-    }
-
-    #final-score {
-        position: relative !important;
-        z-index: 1 !important;
-        font-size: 36px !important;
-        font-weight: bold !important;
-        color: #000000 !important;
-    }
-
-    /* 텍스트 컬러 강제 변경 */
-    h1, h2, h3, h4, p, li, label, span {
-        color: #000000 !important;
-    }
-
-    /* 테두리 스타일 */
-    .container, 
-    .guide-container,
-    .checklist-container,
-    .result-container,
-    .recommendation-container,
-    .question,
-    .explanation,
-    .advice-item {
-        border: 1px solid #000000 !important;
-    }
-
-    /* 체크박스 스타일 강화 */
-    .checkbox {
-        -webkit-appearance: none !important;
-        -moz-appearance: none !important;
-        appearance: none !important;
-        width: 16px !important;
-        height: 16px !important;
-        border: 2px solid #000000 !important;
-        position: relative !important;
-        margin-right: 8px !important;
-        background: none !important;
-    }
-
-    .checkbox:checked::after {
-        content: "✓" !important;
-        position: absolute !important;
-        left: 1px !important;
-        top: -3px !important;
-        color: #000000 !important;
-        font-size: 14px !important;
-    }
-
-    /* 불필요한 요소 제거 */
-    .scroll-top-button,
-    .action-buttons,
-    .info-button,
-    .toast,
-    footer {
-        display: none !important;
-    }
-
-    /* 페이지 나눔 방지 */
-    .category,
-    .recommendation-container,
-    .guide-section {
-        break-inside: avoid !important;
-        page-break-inside: avoid !important;
-    }
-
-    /* 모든 애니메이션 및 전환 효과 제거 */
-    * {
-        transition: none !important;
-        animation: none !important;
-        transform: none !important;
+    button {
+        width: 100%;
+        margin: 0.5rem 0;
     }
 }

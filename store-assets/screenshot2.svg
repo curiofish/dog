@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1080" height="1920" viewBox="0 0 1080 1920" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- 배경 -->
+    <rect width="1080" height="1920" fill="#F5F5F5"/>
+    
+    <!-- 상단 헤더 -->
+    <rect x="0" y="0" width="1080" height="200" fill="#4CAF50"/>
+    <text x="540" y="120" font-family="Arial" font-size="36" fill="#FFFFFF" text-anchor="middle" font-weight="bold">
+        준비 점수: 85%
+    </text>
+    
+    <!-- 결과 카드 -->
+    <g transform="translate(40, 240)">
+        <rect x="0" y="0" width="1000" height="800" rx="20" fill="#FFFFFF"/>
+        
+        <!-- 진행 바 -->
+        <rect x="40" y="40" width="920" height="20" rx="10" fill="#E0E0E0"/>
+        <rect x="40" y="40" width="782" height="20" rx="10" fill="#4CAF50"/>
+        
+        <!-- 조언 -->
+        <text x="40" y="120" font-family="Arial" font-size="32" fill="#333333" font-weight="bold">
+            👍 대체로 준비가 되어있지만, 몇 가지 사항을 더 고려해보세요.
+        </text>
+        
+        <!-- 추천 사항 -->
+        <text x="40" y="200" font-family="Arial" font-size="28" fill="#333333" font-weight="bold">
+            추천 사항:
+        </text>
+        <g transform="translate(60, 260)">
+            <text x="0" y="0" font-family="Arial" font-size="24" fill="#666666">• 체크하지 못한 항목들을 준비해보세요.</text>
+        </g>
+        <g transform="translate(60, 320)">
+            <text x="0" y="0" font-family="Arial" font-size="24" fill="#666666">• 강아지 입양 전에 추가적인 정보를 찾아보세요.</text>
+        </g>
+        <g transform="translate(60, 380)">
+            <text x="0" y="0" font-family="Arial" font-size="24" fill="#666666">• 가족 구성원들과 충분한 상의를 해보세요.</text>
+        </g>
+    </g>
+    
+    <!-- 하단 버튼 -->
+    <rect x="40" y="1800" width="1000" height="80" rx="40" fill="#4CAF50"/>
+    <text x="540" y="1850" font-family="Arial" font-size="28" fill="#FFFFFF" text-anchor="middle" font-weight="bold">
+        다시 체크하기
+    </text>
+</svg> 

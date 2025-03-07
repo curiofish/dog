@@ -1,4 +1,3 @@
-/**
  * 강아지 입양 준비도 체크리스트 스크립트
  * @author 이진우 (LEE JINWOO)
  * @contact milgae@naver.com
